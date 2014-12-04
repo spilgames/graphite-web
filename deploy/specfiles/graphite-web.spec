@@ -15,6 +15,7 @@ Name:       %{my_app_name}
 %define     my_app_arch     x86_64
 %define	    my_app_py		/opt/graphite
 %define	    my_app_venv		/opt/virtualenv
+%define     pip_index_url   http://pypi.shp/softengi/live
 
 Group:      Applications/Internet
 Version:    %{my_app_ver}
