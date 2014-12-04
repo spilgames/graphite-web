@@ -5,9 +5,6 @@
 
 Summary:        ${_description}
 
-# Requires:       # additional requirements
-# BuildRequires:  # additional build requirements, eg: sqlite-devel, Percona-Server-devel-55, unixODBC-devel
-
 # Filled by DOS template engine
 %define	    my_app_ver      {{VER}}
 %define     my_app_rel      {{SPI}}
@@ -29,8 +26,8 @@ Source0:    %{my_app_name}-%{my_app_ver}.tar.gz
 Source1:    %{_topdir}/SOURCES/spil-libs-python-project.inc
 BuildRoot:  %{_tmppath}/%{name}-%{my_app_ver}-%{my_app_rel}-root-%(%{__id_u} -n )
 
-BuildRequires: python-setuptools python-virtualenv python-devel git unzip cairo-devel sqlite-devel libevent-devel Percona-Server-devel-55 Percona-Server-client-55 openssl-devel
-Requires: python uwsgi Percona-Server-shared-55
+BuildRequires: python-setuptools python-virtualenv python-devel git unzip cairo-devel sqlite-devel libevent-devel mysql mysql-devel openssl-devel
+Requires: python uwsgi mysql
 
 %description
 %{_description}
