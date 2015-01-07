@@ -1,4 +1,4 @@
-%define         my_app_name     graphite-web
+%define         my_app_name     spil-libs-graphite-web
 %define         _description    Spil Custom build of graphite web which supports threading
 
 Summary:        ${_description}
@@ -11,6 +11,7 @@ BuildRequires: git unzip cairo-devel sqlite-devel libevent-devel
 # Filled by DOS template engine
 %define     my_app_ver      {{VER}}
 %define     my_app_rel      {{SPI}}
+%define     my_app_prefix
 
 %define     pip_index_url   http://pypi.shp/softengi/live
 
